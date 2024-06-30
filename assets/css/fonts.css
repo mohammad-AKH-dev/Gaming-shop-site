@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url(/assets/webfonts/fa-regular-400.woff2) format(woff2);
+    src: url(/assets/webfonts/fa-regular-400.ttf) format(truetype);
+}

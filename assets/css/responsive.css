@@ -1,0 +1,143 @@
+@media all and (max-width:1400px) {
+    
+}
+
+@media all and (max-width:1200px) {
+    .menu-nav{
+        padding-right: 9rem;
+    }
+    .menu_nav--list{
+        gap: 1rem;
+    }
+    .LogoLink{
+        margin-left: 0;
+    }
+    .search-input{
+        width: 63%;
+    }
+    .header-content-paragraph{
+        max-width: 45rem;
+    }
+    .header-search-input{
+        width: 73%;
+    }
+}
+
+@media all and (max-width:1010px) {
+    /* .menu{
+        gap: 5rem;
+        justify-content: space-evenly;
+        padding-bottom: 4rem;
+    }
+    .menu_nav--listItem-link{
+        font-size: 1.6rem;
+    } */
+    .LogoLink{
+        display: inline-block;
+        width: 110px;
+    }
+    .menu{
+        justify-content: center;
+        gap: 9rem;
+    }
+    .menu_nav--listItem{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .menu-nav{
+        padding-right: 10rem;
+    }
+    .menu_nav--list{
+        gap: 1rem;
+    }
+    .header-content-left{
+        text-align: center;
+    }
+    .header-content-title,.header-content-paragraph{
+        max-width: none;
+    }
+    .header-search-input{
+        width: 100%;
+    }
+    .search-input{
+        width: 76%;
+    }
+    .header-content-title{
+        font-size: 5rem;
+    }
+    .header-content-title::after{
+        left: 13.5rem;
+    }
+}
+
+@media all and (max-width:784px) {
+    .menu_nav--list{
+        display: none;
+    }
+    .menu{
+        justify-content: space-between;
+    }
+    .humbergur_toggle--wrapper{
+        display: block;
+    }
+    .lg-540{
+        max-width: 540px;
+    }
+    .search-input{
+        width: 68%;
+    }
+    .header-menu-section{
+        padding-top: 0;
+    }
+    .header-content-discount{
+        bottom: 3.5rem;
+        left: 1.8rem;
+    }
+    .header-content-title::after{
+        left: 12.2rem;
+    }
+    .header.active .menu {
+        padding-left: 2rem;
+        padding-top: .5rem;
+    }
+}
+
+@media all and (max-width:576px) {
+    .LogoLink{
+        position: absolute;
+        left: 2rem;
+    }
+    .mobile-menu{
+        width: 100%;
+    }
+    .search-input{
+        width: 51%;
+    }
+}
+
+@media all and (max-width:370px) {
+    .search-input{
+        width: 40%;
+    }
+    .header-content-title::after{
+        position: static;
+    }
+}
+@media all and (max-width:306px) {
+    .search-input{
+        width: 30%;
+    }
+}
+
+/* fix grid container */
+
+@media all and (min-width:784px) {
+    .mobile-menu{
+        height: 0px;
+    }
+    .mobile-menu-list{
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+    }
+}
