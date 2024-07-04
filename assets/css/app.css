@@ -18,7 +18,7 @@ html{
 }
 
 body{
-    font-family:  'Poppins Regular';
+    font-family:  'Poppins';
     font-size: 1.5rem;
     color: #fff;
     line-height: 2;
@@ -44,30 +44,37 @@ a{
 
 .header{
     background:url(../images/Banner.jpg);
-    position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: all 300ms;
-    inset: 0;
-    top: 10px;
+    padding-bottom: 20rem;
+    border-bottom-left-radius: 19rem;
+    border-bottom-right-radius: 19rem;
+    margin: 0 .5rem 0 .5rem;
 }
 
-.header.active {
-    background: var(--menu-bg-color) !important;
-    position: fixed;
-    top: 0;
+.header-menu-section{
+    transition: all 300ms;
     inset: 0;
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+
+.header-menu-section.active {
+    position: fixed;
+    background: var(--menu-bg-color) !important;
+    top: 0;
     height: 80px;
     z-index: 99 !important;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-}
-
-
-.header.active .header-menu-section{
     padding-top: 0;
 }
-.header.active .LogoLink{
+
+
+.header-menu-section.active .header-menu-section{
+    padding-top: 0;
+}
+.header-menu-section.active .LogoLink{
     width: 110px;
 }
 
@@ -250,15 +257,11 @@ a{
 /* header contents */
 
 .main{
-    background-image: url(../images/Banner.jpg);
-    padding-top: 24rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-bottom: 8rem;
+   margin-top: -23.5rem;
 }
 
 .header-content-section{
-
+    margin-top: 12rem;
 }
 .header-content-left{
 
@@ -272,6 +275,7 @@ a{
 }
 .header-content-title{
   font-size: 4.8rem;
+  font-family: "Poppins Bold";
   line-height: 1.3;
   font-weight: bold;
   max-width: 42rem;
@@ -379,17 +383,88 @@ a{
 /* boxes */
 
 .boxes{
-
+    text-align: center;
+    gap: 2rem;
+    display: grid !important;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 12rem;
 }
 .box-wrapper{
-
+    background-color: var(--text-color);
+    border-radius: 3rem;
+    width: 100%;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-black-color);
+    flex-direction: column;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    gap: 2rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }
+
+.box-wrapper:hover .box-image-wrapper{
+    background-color: var(--red-color);
+}
+
 .box-image-wrapper{
-
+     background-color: var(--menu-bg-color);
+     padding: 2rem;
+     border-radius: 10rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 250ms;
 }
 
-.box-image
+.box-image{
+
+}
 
 .box-title{
+     padding-bottom: 1rem;
+     font-family: "Poppins Bold";
+}
 
+
+/* trending games section */
+
+.trending-games__section{
+    margin-top: 12rem;
+}
+.trending-games__wrapper{
+
+}
+
+.trending-games__text{
+    color: var(--red-color);
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+.trending-games__title-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.trending-games__title{
+   color: var(--text-black-color);
+   font-size: 3.6rem;
+   font-family: "Poppins Bold";
+
+}
+.trending-games__link{
+   display: inline-block;
+   background-color: var(--red-color);
+   padding: 1rem 3rem 1rem 3rem;
+   border-radius: 3rem;
+   color: var(--text-color);
+}
+
+.fa-shopping-basket::after{
+   content: "";
 }

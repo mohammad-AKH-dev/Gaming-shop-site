@@ -4,8 +4,7 @@ let mobileMenuList = document.querySelector('.mobile-menu-list')
 let humberger = document.querySelector('.hamburger-toggle')
 let humbergerAfter = document.querySelector('.hamburger-toggle-after')
 let humbergerBefore = document.querySelector('.hamburger-toggle-before')
-let header = document.querySelector('.header')
-let lastScroll = null
+let header = document.querySelector('.header-menu-section')
 let flag = false
 
 humbergetToggle.addEventListener('click',()=>{
@@ -42,4 +41,13 @@ humbergetToggle.addEventListener('click',()=>{
                header.classList.remove('active')
          }
          
+   })
+   
+
+   window.addEventListener('load',()=>{
+      fetch('http://localhost:3000/trending Games')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+      })
    })

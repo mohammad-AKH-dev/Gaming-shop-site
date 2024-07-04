@@ -1,0 +1,23 @@
+{
+    "posts": [
+      { "id": "1", "title": "a title", "views": 100 },
+      { "id": "2", "title": "another title", "views": 200 }
+    ],
+    "comments": [
+      { "id": "1", "text": "a comment about post 1", "postId": "1" },
+      { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "trending Games": [
+      {"id": "1", "title": "Assasin Creed","price":28,"discount":22,
+      "img":"assets/images/trending-01.jpg"},
+      {"id": "2", "title": "Genshin Impact","price":44,"discount":0,
+      "img":"assets/images/trending-02.jpg"},
+      {"id": "3", "title": "League of legends","price":64,"discount":44,
+      "img":"assets/images/trending-03.jpg"},
+      {"id": "4", "title": "Assasin Creed","price":28,"discount":22,
+      "img":"assets/images/trending-01.jpg"}
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }

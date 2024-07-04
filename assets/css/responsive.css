@@ -68,6 +68,9 @@
     .header-content-title::after{
         left: 13.5rem;
     }
+    .boxes{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 @media all and (max-width:784px) {
@@ -76,6 +79,7 @@
     }
     .menu{
         justify-content: space-between;
+        padding-top: 1rem;
     }
     .humbergur_toggle--wrapper{
         display: block;
@@ -99,6 +103,9 @@
     .header.active .menu {
         padding-left: 2rem;
         padding-top: .5rem;
+    }
+    .boxes{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
