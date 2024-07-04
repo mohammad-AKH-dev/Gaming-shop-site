@@ -5,6 +5,7 @@
     --text-color: #fff;
     --red-color: #ee626b;
     --menu-bg-color:#0071f8;
+    --box-color: #eeeeee;
 }
 
 
@@ -449,7 +450,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap;
 }
 .trending-games__title{
    color: var(--text-black-color);
@@ -465,6 +466,80 @@ a{
    color: var(--text-color);
 }
 
-.fa-shopping-basket::after{
-   content: "";
+.trending-games__container{
+   margin-top: 6rem;
+   gap: 2.5rem;
+   display: grid !important;
+   grid-template-columns: repeat(4,1fr);
+}
+.trending-game__wrapper{
+    height: auto;
+    background-color: var(--box-color);
+    border-radius: 3rem;
+    padding: 0 0 0 0 !important;
+}
+.trending-game-img__wrapper{
+    position: relative;
+}
+.trending-game-img__wrapper img{
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+}
+
+.trending-game__discount{
+    display: inline-block;
+    width: 6.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: var(--menu-bg-color);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.trending-game__discount p {
+    font-family: "Poppins Bold";
+}
+
+.no-discount{
+    padding: 1rem 0 1rem 0
+}
+
+
+
+.trending-game-title__wrapper{
+    padding: 1rem 2.5rem 1rem 2.5rem;
+}
+.trending-game__kind{
+  color:var(--grey-color)
+}
+
+.trending-game__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trending-game__title p{
+  color: var(--text-black-color);
+  font-family: 'Poppins Bold';
+  font-size: 1.7rem;
+}
+
+.trending-game__title div {
+    width: 40px;
+    height: 40px;
+    background-color: var(--red-color);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.5rem;
+}
+
+.trending-game__title div svg{
+    width: 18px;
 }

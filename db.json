@@ -15,7 +15,7 @@
       {"id": "3", "title": "League of legends","price":64,"discount":44,
       "img":"assets/images/trending-03.jpg"},
       {"id": "4", "title": "Assasin Creed","price":28,"discount":22,
-      "img":"assets/images/trending-01.jpg"}
+      "img":"assets/images/trending-04.jpg"}
     ],
     "profile": {
       "name": "typicode"
