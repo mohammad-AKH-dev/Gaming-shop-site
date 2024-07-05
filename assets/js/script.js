@@ -7,6 +7,7 @@ let humbergerBefore = document.querySelector('.hamburger-toggle-before')
 let header = document.querySelector('.header-menu-section')
 const trendingGamesContainer = document.querySelector('.trending-games__container')
 const mostPlayedGamesContainer = document.querySelector('.mostplayed-games__wrapper')
+const topCategoriesContainer = document.querySelector('.Top-Categories__wrapper')
 let flag = false
 
 //  humburger toggle feature
@@ -85,12 +86,27 @@ humbergetToggle.addEventListener('click',()=>{
       console.log('لطفا سرور را ران کنید')
     }
    }
+   
 
+  //  getting top categories games feature
+
+  const getTopCategories = async () => {
+     const response = await fetch('http://localhost:3000/top-categories')
+     const topCategories = await response.json()
+     const data = topCategories.forEach((category) => {
+           topCategoriesContainer.insertAdjacentHTML('beforeend',`
+            <div class="Top-Category">
+                        <p class="Top-Category__kind">Action</p>
+                        <img src="${category.img}" class="Top-Category__img">
+                    </div>
+            `)
+     })
+  }
 
 
 
    window.addEventListener('load', ()=>{
        getTrendingGames()
-         console.log('this is fetch method effect')
+       getTopCategories()
    })
     

@@ -25,6 +25,13 @@
       {"id": "5", "title": "Lostark","img":"assets/images/top-game-05.jpg","kind":"Adventure"},
       {"id": "6", "title": "Destiny 2","img":"assets/images/top-game-06.jpg","kind":"Adventure"}
     ],
+    "top-categories": [
+      {"id": "1","img":"assets/images/categories-01.jpg"},
+      {"id": "2","img":"assets/images/categories-02.jpg"},
+      {"id": "3","img":"assets/images/categories-03.jpg"},
+      {"id": "4","img":"assets/images/categories-04.jpg"},
+      {"id": "5","img":"assets/images/categories-05.jpg"}
+    ],
     "profile": {
       "name": "typicode"
     }

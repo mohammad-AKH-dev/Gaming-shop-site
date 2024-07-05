@@ -8,6 +8,7 @@
     --box-color: #eeeeee;
     --box-hover:#0a58ca;
     --bg-color: #f7f7f7;
+    --categories-color:#007aff;
 }
 
 
@@ -610,7 +611,7 @@ a{
     background-color: var(--box-color);
     padding: 10rem;
     border-radius: 16rem;
-    padding-bottom: 13rem;
+    padding-bottom: 0rem;
 }
 .mostplayed-games-titles__wrapper{
 
@@ -686,4 +687,52 @@ a{
    border-radius: 3rem;
    color: var(--text-color);
    transition: all 300ms
+}
+
+
+/* Top Categories */
+
+.Top-Categories__section{
+   margin-top: 10rem;
+}
+.Top-Categorie-title__wrapper{
+   text-align: center;
+   margin-bottom: 5.5rem;
+}
+.Top-Categories__text{
+   color: var(--red-color);
+   text-transform: uppercase;
+   font-family: "Poppins Bold";
+   font-size: 1.5rem;
+}
+.Top-Categories__title{
+   color: var(--text-black-color);
+   font-size: 3.6rem;
+   font-family: "Poppins Bold";
+}
+.Top-Categories__wrapper{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 2.5rem;
+}
+.Top-Category{
+  background-color: var(--categories-color);
+  position: relative;
+  height: 235px;
+  text-align: center;
+  border-radius: 3rem;
+}
+.Top-Category__kind{
+    padding-top: 1.3rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.Top-Category__img{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   inset: 0;
+   top: 6rem;
+   border-radius: 3rem;
 }
