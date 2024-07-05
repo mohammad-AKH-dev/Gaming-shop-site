@@ -91,5 +91,6 @@ humbergetToggle.addEventListener('click',()=>{
 
    window.addEventListener('load', ()=>{
        getTrendingGames()
+         console.log('this is fetch method effect')
    })
     
