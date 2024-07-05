@@ -6,6 +6,8 @@
     --red-color: #ee626b;
     --menu-bg-color:#0071f8;
     --box-color: #eeeeee;
+    --box-hover:#0a58ca;
+    --bg-color: #f7f7f7;
 }
 
 
@@ -477,7 +479,17 @@ a{
     background-color: var(--box-color);
     border-radius: 3rem;
     padding: 0 0 0 0 !important;
+    transition: all 300ms;
 }
+
+.trending-game__wrapper:hover .trending-game__title p {
+    color: var(--box-hover);
+}
+
+.trending-game__wrapper:hover .trending-game__title div{
+    background-color: var(--box-hover);
+}
+
 .trending-game-img__wrapper{
     position: relative;
 }
@@ -527,6 +539,7 @@ a{
   color: var(--text-black-color);
   font-family: 'Poppins Bold';
   font-size: 1.7rem;
+  transition: all 300ms;
 }
 
 .trending-game__title div {
@@ -538,8 +551,99 @@ a{
     align-items: center;
     justify-content: center;
     margin-top: -1.5rem;
+    transition: all 300ms;
 }
 
 .trending-game__title div svg{
     width: 18px;
+}
+
+
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    color: red;
+    
+  }
+
+  /* most played games section */
+
+.mostplayed-games__section{
+    margin-top: 10rem;
+}
+.mostplayed-games-titles__wrapper{
+
+}
+
+.mostplayed-games-text{
+    color: var(--red-color);
+    font-weight: bold;
+}
+.mostplayed-games-title__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mostplayed-games-title{
+    font-family: "Poppins Bold";
+    color: var(--text-black-color);
+    font-size: 3.6rem;
+}
+.mostplayed-games-link{
+    padding: 1rem 3rem 1rem 3rem;
+    background-color: var(--red-color);
+    color: var(--text-color);
+    border-radius: 3rem;
+    transition: all 300ms;
+}
+
+
+.mostplayed-games__wrapper{
+   gap: 3rem;
+}
+.mostplayed__game{
+   text-align: center;
+   background-color: var(--text-color);
+   border-radius: 3rem;
+}
+
+.mostplayed__game:hover .mostplayed-game__title {
+    color: var(--menu-bg-color);
+}
+
+.mostplayed__game:hover .mostplayed-game-link {
+    background-color: var(--menu-bg-color);
+}
+
+.mostplayed-game-img__wrapper{
+   width:  100%;
+   height: 56%;
+   margin: 0 auto;
+}
+.mostplayed-game__img{
+   width: 100%;
+   height: 100%;
+   border-radius: 3rem;
+}
+.mostplayed-game__kind{
+   color: var(--grey-color);
+   margin-top: 2rem;
+   margin-bottom: -.5rem;
+}
+.mostplayed-game__title{
+   font-family: "Poppins Bold";
+   font-size: 1.7rem;
+   color: var(--text-black-color);
+   margin-bottom: 1rem;
+   transition: all 300ms;
+}
+.mostplayed-game-link{
+   background-color: var(--red-color);
+   display: inline-block;
+   padding: .5rem 1.5rem .5rem 1.5rem;
+   border-radius: 3rem;
+   color: var(--text-color);
+   transition: all 300ms
 }

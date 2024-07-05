@@ -9,13 +9,21 @@
     ],
     "trending Games": [
       {"id": "1", "title": "Assasin Creed","price":28,"discount":22,
-      "img":"assets/images/trending-01.jpg"},
+      "img":"assets/images/trending-01.jpg","kind": "Action"},
       {"id": "2", "title": "Genshin Impact","price":44,"discount":0,
-      "img":"assets/images/trending-02.jpg"},
+      "img":"assets/images/trending-02.jpg","kind": "Action"},
       {"id": "3", "title": "League of legends","price":64,"discount":44,
-      "img":"assets/images/trending-03.jpg"},
+      "img":"assets/images/trending-03.jpg","kind": "Action"},
       {"id": "4", "title": "Assasin Creed","price":28,"discount":22,
-      "img":"assets/images/trending-04.jpg"}
+      "img":"assets/images/trending-04.jpg","kind": "Action"}
+    ],
+    "mostPlayed-games": [
+      {"id": "1", "title": "Warframe","img":"assets/images/top-game-01.jpg","kind":"Adventure"},
+      {"id": "2", "title": "PUBG","img":"assets/images/top-game-02.jpg","kind":"Adventure"},
+      {"id": "3", "title": "Apex Legends","img":"assets/images/top-game-03.jpg","kind":"Adventure"},
+      {"id": "4", "title": "Sims 4","img":"assets/images/top-game-04.jpg","kind":"Adventure"},
+      {"id": "5", "title": "Lostark","img":"assets/images/top-game-05.jpg","kind":"Adventure"},
+      {"id": "6", "title": "Destiny 2","img":"assets/images/top-game-06.jpg","kind":"Adventure"}
     ],
     "profile": {
       "name": "typicode"
