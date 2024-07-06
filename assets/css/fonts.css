@@ -1,9 +1,11 @@
 @font-face {
     font-family: 'Poppins';
-    src: url(/assets/webfonts/Poppins-Regular.ttf) format(truetype);
+    src: url(../webfonts/Poppins-Regular.ttf) format(truetype);
 }
 
 @font-face {
     font-family: 'Poppins Bold';
-    src: url(/assets/webfonts/Poppins-Bold.ttf) format(truetype);
+    font-weight: 700;
+    font-style: normal;
+    src: url(../webfonts/Poppins-Bold.ttf) format(truetype);
 }

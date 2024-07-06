@@ -1,3 +1,5 @@
+import { initSwiper } from "./swiper.js"
+
 let humbergetToggle = document.querySelector('.humbergur_toggle--wrapper')
 let mobileMenu = document.querySelector('.mobile-menu')
 let mobileMenuList = document.querySelector('.mobile-menu-list')
@@ -86,6 +88,29 @@ humbergetToggle.addEventListener('click',()=>{
       console.log('لطفا سرور را ران کنید')
     }
    }
+
+
+  //  init slider from json server (most played games section)
+
+   const gettingMostPlayedGames = async () => {
+      const response = await fetch('http://localhost:3000/mostPlayed-games')
+      const data = await response.json()
+
+      data.forEach((game)=> {
+        mostPlayedGamesContainer.insertAdjacentHTML('beforeend',`
+          <div class="swiper-slide mostplayed__game">
+                        <div class="mostplayed-game-img__wrapper">
+                            <a href="#"><img src="${game.img}" loading="lazy" class="mostplayed-game__img"></a>
+                        </div>
+                        <p class="mostplayed-game__kind">${game.kind}</p>
+                        <h3 class="mostplayed-game__title">${game.title}</h3>
+                        <a href="#" class="mostplayed-game-link">EXPLORE</a>
+                      </div>
+          `)
+      })
+      initSwiper()
+   }
+
    
 
   //  getting top categories games feature
@@ -107,6 +132,7 @@ humbergetToggle.addEventListener('click',()=>{
 
    window.addEventListener('load', ()=>{
        getTrendingGames()
+       gettingMostPlayedGames()
        getTopCategories()
    })
     
