@@ -81,6 +81,51 @@
     .trending-game__title div{
         margin-top: -1.5rem;
     }
+    .Top-Categories__wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Top-Category{
+        height: 300px;
+        margin-bottom: 6rem;
+    }
+    .order-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .order-img__wrapper{
+        margin-top: 10rem;
+    }
+    .order-img__wrapper img{
+        position: static;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .pre-order__wrapper{
+        padding: 0;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+    .pre_order__title{
+        max-width: 63rem;
+    }
+    .order-section{
+        margin-top: 16rem;
+    }
+    .news-letter__link{
+        width: 28%;
+        padding: 1.3rem;
+    }
+    .news-letter__wrapper{
+        height: auto;
+        padding: 0;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        padding-bottom: 4rem;
+        margin-top: 5rem;
+    }
+    .news-letter__title{
+        margin-bottom: 4rem;
+    }
 }
 
 @media all and (max-width:784px) {
@@ -123,6 +168,34 @@
     .trending-game__wrapper{
         height: 50rem;
     }
+    .Top-Categories__wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Top-Category{
+        
+        margin-bottom: 8rem;
+    }
+    .news-letter__link{
+        display: none;
+    }
+    .news-letter__link--mobile{
+        display: flex;
+    }
+    .news-letter-input__wrapper{
+        flex-direction: column;
+        height: auto;
+        gap: 1.5rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .news-letter__input{
+        position: static;
+        padding: 1.5rem;
+    }
+    .news-letter__title,.pre-order__desc{
+        min-width: auto;
+    }
+
 }
 
 @media all and (max-width:576px) {
@@ -139,7 +212,20 @@
     .trending-game__wrapper{
         height: auto;
     }
+    .mostplayed-games-title__wrapper{
+        display: block;
+    }
+    .mostplayed-games-title{
+        margin-bottom: 1rem;
+    }
+    .swiper-buttons__wrapper{
+        justify-content: space-between;
+    }
+    .Top-Categories__wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
+
 
 @media all and (max-width:370px) {
     .search-input{
@@ -152,10 +238,19 @@
         line-height: 1.3;
         margin-bottom: 1.5rem;
     }
+    .news-letter__wrapper {
+            padding: 0;
+    }
+    .pre-order__wrapper{
+            padding: 0;
+    }
 }
 @media all and (max-width:306px) {
     .search-input{
         width: 30%;
+    }
+    .order-img__wrapper {
+        transform: translateX(-2%);
     }
 }
 

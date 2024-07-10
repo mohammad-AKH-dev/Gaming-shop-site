@@ -122,13 +122,14 @@ humbergetToggle.addEventListener('click',()=>{
            topCategoriesContainer.insertAdjacentHTML('beforeend',`
             <div class="Top-Category">
                         <p class="Top-Category__kind">Action</p>
+                        <a href="#">
                         <img src="${category.img}" class="Top-Category__img">
+                        </a>
                     </div>
             `)
      })
   }
-
-
+  
 
    window.addEventListener('load', ()=>{
        getTrendingGames()
