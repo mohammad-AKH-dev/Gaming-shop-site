@@ -34,6 +34,7 @@ body{
     transition: all 150ms;
     margin-right: 1rem;
     margin-left: 1rem;
+    height: 1000rem;
 }
 
 /* components */
@@ -165,7 +166,7 @@ a{
     width: 70%;
     inset: 0;
     margin: 0 auto;
-    top: 10rem;
+    top: 8rem;
     transition: all 150ms;
     z-index: 100;
 }
@@ -1005,7 +1006,8 @@ a{
 
 }
 .information__wrapper{
-
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 3rem;
 }
 .information-left{
 
@@ -1084,6 +1086,7 @@ a{
    display: flex;
    align-items: center;
    gap: 4rem;
+   flex-wrap: wrap;
 }
 
 .Game-specifications__label{
@@ -1117,4 +1120,80 @@ a{
 }
 .multi-tags__value{
 
+}
+
+
+/* review && description section */
+
+.review-description__section{
+
+}
+.review-description__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.description {
+    position: relative;
+    
+}
+
+.description::after{
+    content: '';
+    position: absolute;
+    top: .5rem;
+    right: -3rem;
+    height: 30px;
+    width: 1px;
+    background-color:rgb(215, 215, 215);
+}
+
+.description,.review{
+  color: rgb(30, 30, 30);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.description.active,.review.active {
+    color: var(--menu-bg-color);
+}
+
+
+.review-description-content__wrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.description-content,.review-content{
+    color: rgb(74, 74, 74);
+    font-size: 1.4rem;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    transition: all 250ms;
+    margin-top: 0;
+    display: none;
+    /* position: absolute;
+    top: 0; */
+}
+
+
+
+.description-content.active, .review-content.active{
+    height: auto;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    margin-top: 3rem;
+}
+
+.p-6 {
+    padding: 6rem;
+    background-color: var(--bg-color);
+    margin-top: 8rem;
+    border-radius: 3rem;
 }

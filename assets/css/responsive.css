@@ -142,6 +142,12 @@
     .information-desc{
         max-width: none;
     }
+    .description, .review{
+        font-size: 1.6rem;
+    }
+    .description::after{
+        height: 25px;
+    }
 }
 
 @media all and (max-width:784px) {
@@ -249,8 +255,17 @@
     .p-33{
         padding-bottom: 41rem !important;
     }
+    .review-description__wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;   
+     }
+     .description::after{
+        transform: rotate(90deg);
+        top: 2.5rem;
+        left: 1.2rem;
+     }
 }
-
 
 @media all and (max-width:370px) {
     .search-input{
