@@ -1,12 +1,4 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
     "trending Games": [
       {"id": "1", "title": "Assasin Creed","price":28,"discount":22,
       "img":"assets/images/trending-01.jpg","kind": "Action"},
@@ -31,8 +23,5 @@
       {"id": "3","img":"assets/images/categories-03.jpg"},
       {"id": "4","img":"assets/images/categories-04.jpg"},
       {"id": "5","img":"assets/images/categories-05.jpg"}
-    ],
-    "profile": {
-      "name": "typicode"
-    }
+    ]
   }

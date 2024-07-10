@@ -27,6 +27,12 @@
     .trending-game__title{
         display: grid;
     }
+    .information-right{
+        padding-left: 9rem;
+    }
+    .information-left img{
+        max-height: 382px;
+    }
 }
 
 @media all and (max-width:1010px) {
@@ -126,6 +132,16 @@
     .news-letter__title{
         margin-bottom: 4rem;
     }
+    .information-left img{
+        max-height: none;
+    }
+    .information-right{
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+    .information-desc{
+        max-width: none;
+    }
 }
 
 @media all and (max-width:784px) {
@@ -195,7 +211,10 @@
     .news-letter__title,.pre-order__desc{
         min-width: auto;
     }
-
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 @media all and (max-width:576px) {
@@ -226,6 +245,12 @@
     }
 }
 
+@media all and (max-width:400px) {
+    .p-33{
+        padding-bottom: 41rem !important;
+    }
+}
+
 
 @media all and (max-width:370px) {
     .search-input{
@@ -245,6 +270,13 @@
             padding: 0;
     }
 }
+
+@media all and (max-width:332px) {
+    .addto-shop__btn{
+        margin-left: 0;
+    }
+}
+
 @media all and (max-width:306px) {
     .search-input{
         width: 30%;
