@@ -148,6 +148,13 @@
     .description::after{
         height: 25px;
     }
+    .related-games__boxes{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2.5rem;
+    }
+    .related-game__img{
+        height: 86%;
+    }
 }
 
 @media all and (max-width:784px) {
@@ -221,6 +228,9 @@
         flex-direction: column;
         flex-wrap: wrap;
     }
+    .related-game__img{
+        height: 82%;
+    }
 }
 
 @media all and (max-width:576px) {
@@ -248,6 +258,15 @@
     }
     .Top-Categories__wrapper{
         grid-template-columns: repeat(1,1fr);
+    }
+    .related-games__boxes{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .related-game__img{
+        height: 90%;
+    }
+    .related-game__box{
+        margin-bottom: 2rem;
     }
 }
 

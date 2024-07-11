@@ -34,7 +34,6 @@ body{
     transition: all 150ms;
     margin-right: 1rem;
     margin-left: 1rem;
-    height: 1000rem;
 }
 
 /* components */
@@ -941,7 +940,8 @@ a{
 }
 
 .footer-text{
-    
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .footer-span{
@@ -988,6 +988,7 @@ a{
 }
 .product-details__name{
   font-size: 1.6rem;
+  color: var(--text-color);
 }
 
 .p-33{
@@ -1001,6 +1002,7 @@ a{
 
 .product-details__main{
     margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 .information__section{
 
@@ -1076,6 +1078,11 @@ a{
    transition: all 300ms;
    border-radius: 3rem;
    margin-left: 1rem;
+   cursor: pointer;
+}
+
+.addto-shop__btn:hover{
+    background-color: var(--menu-bg-color);
 }
 
 .addto-shop__btn i {
@@ -1195,5 +1202,69 @@ a{
     padding: 6rem;
     background-color: var(--bg-color);
     margin-top: 8rem;
+    border-radius: 3rem;
+}
+
+
+/* related games section */
+
+
+.related-games__section{
+    margin-top: 10rem;
+}
+.related-games-title__wrapper{
+    font-family: 'Poppins Bold';
+}
+.realted-games__text{
+    color: var(--red-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}   
+.related-games__title{
+    color: var(--text-black-color);
+    font-size: 3.6rem;
+    font-weight: 700;
+
+}
+.related-games__link{
+    background-color: var(--red-color);
+    transition: all 300ms;
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 3rem;
+    color: var(--text-color);
+}
+
+.related-games__link:hover{
+    background-color: var(--menu-bg-color);
+}
+
+.related-games__boxes{
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2rem;
+}
+.related-game__box{
+    /* position: relative; */
+    background-color: var(--menu-bg-color);
+    border-radius: 3rem;
+}
+.related-game__genre{
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.related-game__img{
+    width: 100%;
+    height: 81%;
+    object-fit: cover;
     border-radius: 3rem;
 }

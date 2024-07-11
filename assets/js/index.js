@@ -17,7 +17,7 @@ const topCategoriesContainer = document.querySelector('.Top-Categories__wrapper'
            trendingGamesContainer.insertAdjacentHTML('beforeend',`
                 <div class="trending-game__wrapper">
                       <div class="trending-game-img__wrapper">
-                          <a href="#"><img src="${game.img}"></a>
+                          <a href="product-details.html?id=${game.id}"><img src="${game.img}"></a>
                           <span class="trending-game__discount">
                              ${game.discount > 0 ? `<del>$${game.discount}</del> <P>$${game.price}</P>`
                               :`<p class="no-discount">$${game.price}</p>`}
@@ -53,7 +53,7 @@ const topCategoriesContainer = document.querySelector('.Top-Categories__wrapper'
         mostPlayedGamesContainer.insertAdjacentHTML('beforeend',`
           <div class="swiper-slide mostplayed__game">
                         <div class="mostplayed-game-img__wrapper">
-                            <a href="#"><img src="${game.img}" loading="lazy" class="mostplayed-game__img"></a>
+                            <a href="product-details.html?id=${game.id}"><img src="${game.img}" loading="lazy" class="mostplayed-game__img"></a>
                         </div>
                         <p class="mostplayed-game__kind">${game.kind}</p>
                         <h3 class="mostplayed-game__title">${game.title}</h3>
@@ -75,7 +75,7 @@ const topCategoriesContainer = document.querySelector('.Top-Categories__wrapper'
            topCategoriesContainer.insertAdjacentHTML('beforeend',`
             <div class="Top-Category">
                         <p class="Top-Category__kind">Action</p>
-                        <a href="#">
+                        <a href="product-details.html?id=${category.id}">
                         <img src="${category.img}" class="Top-Category__img">
                         </a>
                     </div>
