@@ -33,6 +33,16 @@
     .information-left img{
         max-height: 382px;
     }
+    .mh-195{
+        max-height: 168px;
+    }
+    .title-flex{
+        display: flex !important;
+        align-items: center;
+    }
+    .fs-1-4{
+        font-size: 1.4rem !important;
+    }
 }
 
 @media all and (max-width:1010px) {
@@ -155,6 +165,22 @@
     .related-game__img{
         height: 86%;
     }
+    .mh-195{
+        max-height: 246px;
+    }
+    .mh-344{
+        max-height: 344px;
+        max-width: 336px;
+        margin: 0 auto;
+        margin-bottom: 2.5rem;
+    }
+    .trending-games__container.m-auto{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 @media all and (max-width:784px) {
@@ -230,6 +256,9 @@
     }
     .related-game__img{
         height: 82%;
+    }
+    .footer-text{
+        margin-top: 2rem;
     }
 }
 
@@ -322,6 +351,12 @@
 
 /* fix grid container */
 
+@media all and (min-width:600px) {
+    .mh-344{
+        max-width: 80%;
+    }
+}
+
 @media all and (min-width:784px) {
     .mobile-menu{
         height: 0px;
@@ -330,5 +365,8 @@
         visibility: hidden;
         opacity: 0;
         height: 0px;
+    }
+    .mh-344{
+        max-width: 95%;
     }
 }

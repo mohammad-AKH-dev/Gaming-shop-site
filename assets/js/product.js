@@ -14,11 +14,11 @@ let urlSearchParams = new URLSearchParams(location.search)
 // review and description section
 
 reviewDescriptionWrapper.addEventListener('click',(event)=>{
-    reviewDescriptionSpans.forEach((span)=> {
-        span.classList.remove('active')
-    })
-     
-     if(event.target.tagName === 'SPAN'){
+   
+   if(event.target.tagName === 'SPAN'){
+        reviewDescriptionSpans.forEach((span)=> {
+            span.classList.remove('active')
+        })
        event.target.classList.add('active')
 
     for ( let content of descriptionReviewsContents){
@@ -56,7 +56,6 @@ async function dynamicTags () {
    if(gameName){
     const response = await fetch(`http://localhost:3000/allGames/${gameName}`)
     const game = await response.json()
-    console.log(game)
       gameImg.src = game.img
       gameTitle.innerHTML = game.title
       gamePrice.innerHTML = `$${game.price}`
@@ -72,6 +71,9 @@ async function dynamicTags () {
       gamePrice.innerHTML = '$28'
       gameDiscount.innerHTML = '$22'
       gameID.innerHTML = 'COD MMII'
+      productDetailsTitle.innerHTML = 'Modern Warfare® II'
+      productDetailsName.innerHTML = 'Modern Warfare® II'
+      productDetailsName.href = `product-details.html`
    }
 }
 

@@ -491,6 +491,7 @@ a{
    grid-template-columns: repeat(4,1fr);
 }
 .trending-game__wrapper{
+    width: 100%;
     height: auto;
     background-color: var(--box-color);
     border-radius: 3rem;
@@ -937,11 +938,11 @@ a{
     color: var(--text-color);
     font-size: 1.6rem;
     gap: 2rem;
+    overflow: hidden;
 }
 
 .footer-text{
     text-align: center;
-    margin-top: 2rem;
 }
 
 .footer-span{
@@ -1154,6 +1155,7 @@ a{
     height: 30px;
     width: 1px;
     background-color:rgb(215, 215, 215);
+    pointer-events: none;
 }
 
 .description,.review{
@@ -1203,6 +1205,10 @@ a{
     background-color: var(--bg-color);
     margin-top: 8rem;
     border-radius: 3rem;
+}
+
+.mh-195{
+    max-height: 195px;
 }
 
 
@@ -1267,4 +1273,93 @@ a{
     height: 81%;
     object-fit: cover;
     border-radius: 3rem;
+}
+
+/* ordination section */
+
+.ordination__section{
+  margin-top: 12rem;
+  margin-bottom: 8rem;
+}
+.main-ordination__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.main-ordination__item{
+  color: var(--text-black-color);
+  font-family: 'Poppins Bold';
+  font-size: 1.5rem;
+  transition: all 300ms;
+  padding: .5rem 2.1rem .5rem 2.1rem;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.main-ordination__item.active {
+    background-color: var(--red-color);
+    color: var(--text-color);
+}
+
+.main-ordination__item.active:hover{
+    color: var(--text-color);
+}
+
+.main-ordination__item:hover{
+    color: var(--red-color);
+}
+
+
+/* pagination */
+
+.related__boxes-pagionation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+}
+.pagionation-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.pagination-item,.pagination-item--prev
+.pagination-item--next{
+    background-color: #eee;
+    color: var(--text-black-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.pagination-item.active {
+    color: var(--text-color);
+    background-color: var(--menu-bg-color);
+}
+
+.pagination-item:hover{
+    color: var(--text-color);
+    background-color: var(--menu-bg-color);
+}
+
+.pagination-item--prev{
+
+}
+.pagination-item--next{
+
 }
