@@ -977,6 +977,7 @@ a{
    font-family: 'Poppins Bold';
    text-transform: uppercase;
    line-height: 1.2;
+   margin-bottom: 1rem;
 }
 
 .product-details-links__wrapper{
@@ -1362,4 +1363,9 @@ a{
 }
 .pagination-item--next{
 
+}
+
+.mostplayed-games-text{
+    letter-spacing: 1px;
+    font-size: bold;
 }

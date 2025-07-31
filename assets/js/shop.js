@@ -43,7 +43,6 @@ function getAllGames (start,end){
 
 const ordinationItems = document.querySelector('.main-ordination__wrapper')
 ordinationItems.addEventListener('click',(event)=>{
-    console.log(event.target.tagName)
     if(event.target.tagName === "SPAN"){
         fillterGames(event.target)
     }
