@@ -1,18 +1,186 @@
-const gamesWrapper = document.querySelector('.trending-games__container')
-const allPageItemsWrapper = document.querySelector('.pagionation-list')
-let allGames = null
+const gamesWrapper = document.querySelector(".trending-games__container");
+const allPageItemsWrapper = document.querySelector(".pagionation-list");
+let allGames = null;
 
 // get All games
 
-function getAllGames (start,end){
-   
-    fetch('http://localhost:3000/allGames')
-         .then(res => res.json())
-         .then(data => {
-            allGames = data
-            const copyAllGames = [...allGames]
-            copyAllGames.slice(start,end).forEach((game)=> {
-                gamesWrapper.insertAdjacentHTML('beforeend',`
+function getAllGames(start, end) {
+  const data = [
+    {
+      id: "1",
+      title: "Warframe",
+      img: "assets/images/top-game-01.jpg",
+      kind: "Adventure",
+      price: 33,
+      discount: 29,
+    },
+    {
+      id: "2",
+      title: "PUBG",
+      img: "assets/images/top-game-02.jpg",
+      kind: "Adventure",
+      price: 40,
+      discount: 35,
+    },
+    {
+      id: "3",
+      title: "Apex Legends",
+      img: "assets/images/top-game-03.jpg",
+      kind: "Adventure",
+      price: 24,
+      discount: 20,
+    },
+    {
+      id: "4",
+      title: "Sims 4",
+      img: "assets/images/top-game-04.jpg",
+      kind: "Adventure",
+      price: 30,
+      discount: 25,
+    },
+    {
+      id: "5",
+      title: "Lostark",
+      img: "assets/images/top-game-05.jpg",
+      kind: "Adventure",
+      price: 50,
+      discount: 40,
+    },
+    {
+      id: "6",
+      title: "Destiny 2",
+      img: "assets/images/top-game-06.jpg",
+      kind: "Adventure",
+      price: 20,
+      discount: 15,
+    },
+    {
+      id: "7",
+      title: "Warframe",
+      price: 28,
+      discount: 22,
+      img: "assets/images/trending-01.jpg",
+      kind: "Strategy",
+    },
+    {
+      id: "8",
+      title: "Genshin Impact",
+      price: 44,
+      discount: 30,
+      img: "assets/images/trending-02.jpg",
+      kind: "Strategy",
+    },
+    {
+      id: "9",
+      title: "League of legends",
+      price: 64,
+      discount: 44,
+      img: "assets/images/trending-03.jpg",
+      kind: "Strategy",
+    },
+    {
+      id: "10",
+      title: "Dragon",
+      price: 28,
+      discount: 22,
+      img: "assets/images/trending-04.jpg",
+      kind: "Strategy",
+    },
+    {
+      id: "11",
+      title: "BrawlHalla",
+      img: "assets/images/categories-01.jpg",
+      price: 30,
+      discount: 25,
+      kind: "Racing",
+    },
+    {
+      id: "12",
+      title: "Dota 2",
+      img: "assets/images/categories-02.jpg",
+      price: 27,
+      discount: 22,
+      kind: "Racing",
+    },
+    {
+      id: "13",
+      title: "Tower of destiny",
+      img: "assets/images/categories-03.jpg",
+      price: 14,
+      discount: 10,
+      kind: "Racing",
+    },
+    {
+      id: "14",
+      title: "super people",
+      img: "assets/images/categories-04.jpg",
+      price: 44,
+      discount: 36,
+      kind: "Racing",
+    },
+    {
+      id: "15",
+      title: "Warframe",
+      img: "assets/images/categories-05.jpg",
+      price: 50,
+      discount: 40,
+      kind: "Racing",
+    },
+    {
+      id: "16",
+      title: "Warframe",
+      img: "assets/images/top-game-01.jpg",
+      kind: "Adventure",
+      price: 33,
+      discount: 29,
+      kind: "Racing",
+    },
+    {
+      id: "17",
+      title: "PUBG",
+      img: "assets/images/top-game-02.jpg",
+      kind: "Adventure",
+      price: 40,
+      discount: 35,
+    },
+    {
+      id: "18",
+      title: "Apex Legends",
+      img: "assets/images/top-game-03.jpg",
+      kind: "Strategy",
+      price: 24,
+      discount: 20,
+    },
+    {
+      id: "19",
+      title: "Sims 4",
+      img: "assets/images/top-game-04.jpg",
+      kind: "Racing",
+      price: 30,
+      discount: 25,
+    },
+    {
+      id: "20",
+      title: "Lostark",
+      img: "assets/images/top-game-05.jpg",
+      kind: "Strategy",
+      price: 50,
+      discount: 40,
+    },
+    {
+      id: "21",
+      title: "Destiny 2",
+      img: "assets/images/top-game-06.jpg",
+      kind: "Strategy",
+      price: 20,
+    },
+  ];
+   allGames = data;
+  const copyAllGames = [...allGames];
+  copyAllGames.slice(start, end).forEach((game) => {
+    gamesWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
                     <div class="col-3 trending-game__wrapper mh-344">
                     <div class="trending-game-img__wrapper">
                         <a href="product-details.html?id=${game.id}"><img src="${game.img}" class="mh-195"></a>
@@ -33,37 +201,39 @@ function getAllGames (start,end){
                         </div>
                     </div>
                 </div>
-              `)
-            })
-            window.scrollTo(0, 1200);
-         })
+              `
+    );
+  });
+  window.scrollTo(0, 1200);
 }
 
 // get filltered games
 
-const ordinationItems = document.querySelector('.main-ordination__wrapper')
-ordinationItems.addEventListener('click',(event)=>{
-    if(event.target.tagName === "SPAN"){
-        fillterGames(event.target)
+const ordinationItems = document.querySelector(".main-ordination__wrapper");
+ordinationItems.addEventListener("click", (event) => {
+  if (event.target.tagName === "SPAN") {
+    fillterGames(event.target);
+  }
+});
+
+function fillterGames(item) {
+  ordinationItems
+    .querySelectorAll(".main-ordination__item")
+    .forEach((span) => span.classList.remove("active"));
+  item.classList.add("active");
+  gamesWrapper.innerHTML = "";
+  let copyAllGames = [...allGames];
+  let newCopyAllGames = [...copyAllGames].filter((game) => {
+    if (item.innerHTML === "Show All") {
+      return [...copyAllGames].splice(12);
+    } else {
+      return game.kind === item.innerHTML;
     }
-})
-
-
-function fillterGames (item){
-       ordinationItems.querySelectorAll('.main-ordination__item').forEach(span => span.classList.remove('active'))
-      item.classList.add('active')
-    gamesWrapper.innerHTML = ''
-    let copyAllGames = [...allGames]
-   let newCopyAllGames = copyAllGames.filter(game => {
-        if(item.innerHTML === "Show All"){
-            return copyAllGames.splice(12)
-        }else{
-            return game.kind === item.innerHTML
-        }
-    })
-   console.log(newCopyAllGames)
-   newCopyAllGames.forEach(game => {
-      gamesWrapper.insertAdjacentHTML('beforeend',`
+  });;
+  newCopyAllGames.forEach((game) => {
+    gamesWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
         <div class="col-3 trending-game__wrapper mh-344">
                     <div class="trending-game-img__wrapper">
                         <a href="product-details.html?id=${game.id}"><img src="${game.img}" class="mh-195"></a>
@@ -84,69 +254,63 @@ function fillterGames (item){
                         </div>
                     </div>
                 </div>
-     `)
-   })
+     `
+    );
+  });
 }
-
 
 // pagination Lugic
 
+allPageItemsWrapper.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    allPageItemsWrapper
+      .querySelectorAll(".pagination-item")
+      .forEach((page) => page.classList.remove("active"));
+    handleItemsWithPagination(event.target);
+  }
+});
 
-allPageItemsWrapper.addEventListener('click',(event)=> {
-    if(event.target.tagName === 'LI'){
-        allPageItemsWrapper.querySelectorAll('.pagination-item')
-        .forEach((page) => page.classList.remove('active'))
-        handleItemsWithPagination(event.target)
+let currentPage = 1;
+let rows = 6;
+let currentItem = null;
+
+function handleItemsWithPagination(target) {
+  target.classList.add("active");
+
+  if (target.className.match("pagination-item--prev")) {
+    currentPage = currentPage - 1;
+    if (currentPage === 0) {
+      currentPage = 3;
     }
-})
-
-let currentPage = 1
-let rows = 6
-let currentItem = null
-
-function handleItemsWithPagination (target){
-    target.classList.add('active')
-   
-    if(target.className.match('pagination-item--prev')){
-        currentPage = currentPage - 1
-        if(currentPage === 0){
-            currentPage = 3
-        }
-        target.classList.remove('active')
-        allPageItemsWrapper.querySelectorAll('.pagination-item')
-        .forEach((page) => {
-            if(+page.innerHTML === currentPage){
-                page.classList.add('active')
-            }
-        })
-        
-    }else if (target.className.match('pagination-item--next')){
-        currentPage = currentPage + 1
-        if(currentPage === 4){
-            currentPage = 1
-        }
-        target.classList.remove('active')
-        allPageItemsWrapper.querySelectorAll('.pagination-item')
-        .forEach((page) => {
-            if(+page.innerHTML === currentPage){
-                page.classList.add('active')
-            }
-        })
-        
-    }else{
-        currentItem = target.value
-        currentPage = currentItem
+    target.classList.remove("active");
+    allPageItemsWrapper.querySelectorAll(".pagination-item").forEach((page) => {
+      if (+page.innerHTML === currentPage) {
+        page.classList.add("active");
+      }
+    });
+  } else if (target.className.match("pagination-item--next")) {
+    currentPage = currentPage + 1;
+    if (currentPage === 4) {
+      currentPage = 1;
     }
-    
-    let end = currentPage * rows
-    let start = end - rows
+    target.classList.remove("active");
+    allPageItemsWrapper.querySelectorAll(".pagination-item").forEach((page) => {
+      if (+page.innerHTML === currentPage) {
+        page.classList.add("active");
+      }
+    });
+  } else {
+    currentItem = target.value;
+    currentPage = currentItem;
+  }
 
+  let end = currentPage * rows;
+  let start = end - rows;
 
-    gamesWrapper.innerHTML = ''
-    getAllGames(start,end)
-
+  gamesWrapper.innerHTML = "";
+  getAllGames(start, end);
 }
 
-window.addEventListener('load',()=> {
-    getAllGames(0,12)
-})
+window.addEventListener("load", () => {
+  getAllGames(0, 12);
+});
